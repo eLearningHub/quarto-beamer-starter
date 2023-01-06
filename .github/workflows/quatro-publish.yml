@@ -1,0 +1,44 @@
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+name: Render and Publish
+
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          # Do not render to PDF
+          tinytex: false
+          # uncomment below and fill to pin a version
+          # version: 0.9.600
+
+      - name: requirements
+        run: make requirements
+
+      - name: Render Quarto Project
+        uses: quarto-dev/quarto-actions/render@v2
+
+      - name: Upload
+        uses: actions/upload-artifact@master
+        with:
+          name: slides
+          path: _PRESENTATIONS/Example-Input
+
+      - name: Index
+        run: cp _PRESENTATIONS/Example-Input/Example-Input.htm _PRESENTATIONS/Example-Input/index.html
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: _PRESENTATIONS/Example-Input

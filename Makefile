@@ -1,0 +1,2 @@
+requirements:
+	quarto install tinytex
