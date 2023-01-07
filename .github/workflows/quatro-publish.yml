@@ -32,13 +32,13 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: slides
-          path: _PRESENTATIONS/Example-Input
+          path: _output/src
 
       - name: Index
-        run: cp _PRESENTATIONS/Example-Input/Example-Input.htm _PRESENTATIONS/Example-Input/index.html
+        run: cp _output/src/Example-Input.htm _output/src/index.html
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: _PRESENTATIONS/Example-Input
+          publish_dir: _output/src

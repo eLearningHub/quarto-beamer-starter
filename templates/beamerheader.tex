@@ -1,0 +1,39 @@
+% Packages
+\usepackage[]{units}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{tcolorbox}
+\usepackage{physics}
+
+% Colors
+\colorlet{structure}{red!25!black}
+\xdefinecolor{Concordia1}{rgb}{0.89,0.82,0.70}
+\xdefinecolor{Concordia2}{rgb}{0.83,0.72,0.54}
+\xdefinecolor{Concordia3}{rgb}{0.52,0.04,0.17}
+
+\beamertemplateshadingbackground{white}{white}%{Concord2}
+\usecolortheme[named=Concordia3]{structure}
+
+% Fonts
+\setmainfont{IBMPlexSans}[
+  Path=./fonts/IBM_Plex_Sans/,
+  Extension = .ttf,
+  UprightFont=*-Regular,
+  BoldFont=*-Bold,
+  ItalicFont=*-Italic,
+  BoldItalicFont=*-BoldItalic
+  ]
+
+\setsansfont{PatuaOne}[
+  Path=./fonts/Patua_One/,
+  Extension = .ttf,
+  UprightFont=*-Regular
+  ]
+  
+% Theme
+\usetheme{Madrid}
+\setbeamertemplate{page number in head/foot}[framenumber]
+
+% Style
+\logo{\includegraphics[height=0.4in]{./style/concordia-logo.png}}
+\beamertemplatenavigationsymbolsempty
