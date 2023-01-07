@@ -38,4 +38,4 @@ Temporary Items
 
 *.R
 /.luarc.json
-_PRESENTATIONS
+_output/
