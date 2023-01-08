@@ -4,9 +4,11 @@
 \usepackage{multicol}
 \usepackage{tcolorbox}
 \usepackage{physics}
+\usepackage{caption}
 
 % Theme
-\usetheme{Madrid}
+\usetheme{metropolis}
+%\usetheme{Madrid}
 %\useoutertheme{miniframes} % Alternatively: miniframes, infolines, split
 \beamertemplatenavigationsymbolsempty
 
@@ -18,7 +20,31 @@
 \definecolor{eLearningHub5}{rgb}{0.12,0.12,0.21}
 
 %\beamertemplateshadingbackground{eLearningHub5}{eLearningHub1}
-\usecolortheme[named=eLearningHub4]{structure}
+%\usecolortheme[named=eLearningHub4]{structure}
+
+% Colors
+\definecolor{red}{RGB}{237, 28, 36}
+\definecolor{gold}{RGB}{255, 199, 44}
+\definecolor{darkgold}{RGB}{224, 165, 0}
+\definecolor{gray}{RGB}{225, 228, 232}
+\newcommand{\progressbar}{5pt}
+
+% Captions
+\captionsetup[figure]{labelfont={bf,color=eLearningHub4}}
+\captionsetup[table]{labelfont={bf,color=eLearningHub4}}
+
+% Progress Bar
+\makeatletter
+\setlength{\metropolis@titleseparator@linewidth}{\progressbar}
+\setlength{\metropolis@progressonsectionpage@linewidth}{\progressbar}
+\setlength{\metropolis@progressinheadfoot@linewidth}{\progressbar}
+\makeatother
+
+% Slide colors
+\setbeamercolor{alerted text}{fg=eLearningHub3}
+\setbeamercolor{example text}{fg=darkgold}
+\setbeamercolor{palette primary}{bg=eLearningHub4}
+\setbeamercolor{bibliography entry location}{fg=eLearningHub4}
 
 % Style
 \logo{\includegraphics[height=0.4in]{imgs/eLearningHub-logo.png}}
