@@ -14,7 +14,7 @@ Text here. You can use the <mark>mark tag</mark> to highlight things in some for
 
 ## New slide heading
 
-![](imgs/cat.png)
+![](imgs/Brown_spotted_tabby_bengal_cat_2.png)
 
 ## Incremental lists
 
