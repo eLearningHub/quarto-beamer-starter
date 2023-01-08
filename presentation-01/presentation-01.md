@@ -1,6 +1,9 @@
 ---
-title: 'Slides 1'
-subtitle: 'James Adams'
+title: 'Some Cool Sounding Buzzwords'
+subtitle: 'Less Buzzy and Somewhat More Explanaotry Subtitle'
+author: Damien Théroux
+date: today
+date-format: long
 ---
 
 # Section heading
