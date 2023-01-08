@@ -42,9 +42,12 @@ format:
   pptx:
     reference-doc: templates/pptx/cosmic-latte.pptx
   revealjs:
-    theme: templates/slide-theme.scss
+    theme: [_extensions/metropolis-theme/metropolis.scss] # templates/slide-theme.scss
     transition: slide
     margin: 0.2
     smaller: false
     subtitle: ''
     output-ext: htm
+    toc: true
+    toc-depth: 1
+    menu: true
